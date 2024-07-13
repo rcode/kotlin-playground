@@ -12,6 +12,10 @@ internal class Main {
         fun main(args: Array<String>) {
             val m = Main()
             println("String length: " + m.getStringLength())
+
+            var email: String
+            email = null.toString()
+            println(email)
         }
     }
 }

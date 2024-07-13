@@ -38,6 +38,7 @@ fun minimumBribes(q: Array<Int>): Unit {
 fun minimumBribes2(q: Array<Int>): Unit {
 
     var totalStepCount = 0
+    val num = mutableListOf<String>()
     for(i in (q.size - 1) downTo 0 ) {
         var j= i-1
         var step = 0

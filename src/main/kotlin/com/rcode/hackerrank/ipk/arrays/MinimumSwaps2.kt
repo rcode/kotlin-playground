@@ -1,5 +1,6 @@
 package com.rcode.hackerrank.ipk.arrays
 
+import java.util.*
 import kotlin.math.absoluteValue
 
 // Complete the minimumSwaps function below.
@@ -41,7 +42,7 @@ fun Int.distance(index: Int): Int {
 }
 
 fun Array<Int>.arraySwap(indexFirst: Int, indexSecond: Int) {
-    var temp = this[indexFirst]
+    val temp = this[indexFirst]
     this[indexFirst] = this[indexSecond]
     this[indexSecond] = temp
 }
@@ -53,32 +54,32 @@ fun Array<Int>.printArray() {
     }
 }
 
-//fun main(args: Array<String>) {
-//    val scan = Scanner(System.`in`)
-//
-//    val n = scan.nextLine().trim().toInt()
-//
-//    val arr = scan.nextLine().split(" ").map{ it.trim().toInt() }.toTypedArray()
-//
-//    val res = minimumSwaps(arr)
-//
-//    println(res)
-//}
+fun main(args: Array<String>) {
+    val scan = Scanner(System.`in`)
+
+    val n = scan.nextLine().trim().toInt()
+
+    val arr = scan.nextLine().split(" ").map{ it.trim().toInt() }.toTypedArray()
+
+    val res = minimumSwaps(arr)
+
+    println(res)
+}
 
 
-fun minimumSwaps2(num_array: Array<Int>) {
+fun minimumSwaps2(numArray: Array<Int>) {
 
     // if the number does not match the index then swap to correct index
-    var visited = 0
+    val visited = 0
     var currentIndex = 0
     var holder = 0
 
-    var visited_indices = Array<Boolean>(num_array.size) { false }
-    while(visited < num_array.size) {
-        if(num_array[currentIndex] != currentIndex + 1) {
-            holder = num_array[num_array[currentIndex]]
-            num_array[num_array[currentIndex]] = num_array[currentIndex]
-            currentIndex = num_array[currentIndex]
+    var visited_indices = Array<Boolean>(numArray.size) { false }
+    while(visited < numArray.size) {
+        if(numArray[currentIndex] != currentIndex + 1) {
+            holder = numArray[numArray[currentIndex]]
+            numArray[numArray[currentIndex]] = numArray[currentIndex]
+            currentIndex = numArray[currentIndex]
         }
     }
 }
